@@ -16,14 +16,11 @@ public class Program
 
         //Test.AnonymousMethod1();
         //Test.AnonymousMethod2();
+        //Test.LambdaMethod1();
+        //Test.LambdaMethod2();
+        //Test.LambdaSyntax();
 
-        var lambda = () =>
-        {
-            Console.WriteLine("This is lambda expression");
-        };
-        lambda();
+        Test.GenericFunction();
+        //Test.CreateGenericClass();
     }
-
-
-
 }
