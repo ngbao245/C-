@@ -2,6 +2,8 @@
 using LINQ.CallbackDelegate;
 using LINQ.LambdaExpression;
 using LINQ.Generic;
+using LINQ.IEnumerableYield;
+using BenchmarkDotNet.Running;
 
 
 namespace LINQ
@@ -120,5 +122,11 @@ namespace LINQ
             GenericClass<int> generic = new GenericClass<int>(1);
             generic.PrintValue();
         }
+
+        // IEnumerable & Yield
+        public static void YieldBenchmark()
+        {
+            var summary = BenchmarkRunner.Run<YieldReturn>();
+        }
     }
-}
+}   

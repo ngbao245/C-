@@ -1,4 +1,6 @@
-﻿using LINQ;
+﻿using BenchmarkDotNet.Running;
+using LINQ;
+using LINQ.IEnumerableYield;
 using LINQ.LambdaExpression;
 using static LINQ.LambdaExpression.Lambda;
 
@@ -20,7 +22,17 @@ public class Program
         //Test.LambdaMethod2();
         //Test.LambdaSyntax();
 
-        Test.GenericFunction();
+        //Test.GenericFunction();
         //Test.CreateGenericClass();
+
+        /// Change Debug to Release
+        //Test.YieldBenchmark();
+
+
+
+    }
+    public Enumerable s()
+    {
+        return s();
     }
 }
